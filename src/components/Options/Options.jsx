@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
-import styles from './Options.module.css';
+import { FeedbackOptionsUi, FeedbackButton } from './Options.styled';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <div className={styles.options}>
+    <FeedbackOptionsUi>
       {options.map(option => (
-        <button key={option} onClick={() => onLeaveFeedback(option)}>
+        <FeedbackButton key={option} onClick={() => onLeaveFeedback(option)}>
           {option}
-        </button>
+        </FeedbackButton>
       ))}
-    </div>
+    </FeedbackOptionsUi>
   );
 };
 
